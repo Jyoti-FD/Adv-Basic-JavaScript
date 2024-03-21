@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumbnile img{
+            height: 25px;
+            width: 25px;
+        }
+        .maincontainer img{
+            height: 415px;
+            width: 415px;
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnile">
+        <img src="../Adv-Basic-JavaScript/image/img1.png" alt="">
+        <img src="../Adv-Basic-JavaScript/image/img2.png" alt="">
+        <img src="../Adv-Basic-JavaScript/image/img3.png" alt="">
+        <img src="../Adv-Basic-JavaScript/image/img4.png" alt="">
+        <img src="../Adv-Basic-JavaScript/image/img5.png" alt="">
+    </div>
+    <div class="maincontainer">
+        <img src="../Adv-Basic-JavaScript/image/img1.png" alt="">
+    </div>
+
+
+    <script>
+        var myallimage = document.querySelectorAll(".thumbnile img")
+        console.log(myallimage)
+
+        myallimage.forEach(function(img){
+            img.addEventListener("click",function(){
+                var myallimage = this.getAttribute("src")
+                console.log(myallimage);
+                // get img src from selected element
+
+
+                var preview = document.querySelector(".maincontainer img");
+                console.log(preview);
+
+                // set preview get src img
+
+                preview.setAttribute("src",myallimage);
+            })
+        })
+    </script>
+</body>
+</html>

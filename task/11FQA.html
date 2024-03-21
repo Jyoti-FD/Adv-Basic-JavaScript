@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FQA</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .maincontainer{
+            margin-top: 70px;
+        }
+        .subcontainer{
+            margin-left: 400px;
+        }
+        .que{
+            background-color: darkblue;
+            height: 50px;
+            width: 80%;
+            color: white;
+            margin-top: -10px;
+        }
+        
+        .subcontainer .ans {
+            background-color: lightblue;
+            display: none;
+            height: 100px;
+            width: 80%;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frequently questioned answers</h1>
+    <div class="maincontainer">
+        <div class="subcontainer">
+            <div class="que">
+                <h2>What is Netflix?</h2>
+            </div>
+            <div class="ans">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quia eaque natus mollitia sunt unde dolores tempora dicta  nobis corrupti eos quas, suscipit numquam? Dolorem, vero repellendus distinctio ipsa aliquid hic omnis est blanditiis fugiat vitae corrupti ipsum voluptates possimus dicta non. Minus officiis repellat sapiente molestias placeat numquam nisi!
+                </p>
+            </div>
+        </div>
+        <div class="subcontainer">
+            <div class="que">
+                <h2>What is Netflix?</h2>
+            </div>
+            <div class="ans">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quia eaque natus mollitia sunt unde dolores tempora dicta  <br>nobis corrupti eos quas, suscipit numquam? Dolorem, vero repellendus distinctio ipsa aliquid hic omnis est blanditiis fugiat vitae <br> corrupti ipsum voluptates possimus dicta non. Minus officiis repellat sapiente molestias placeat numquam nisi!
+                </p>
+            </div>
+        </div>
+        <div class="subcontainer">
+            <div class="que">
+                <h2>What is Netflix?</h2>
+            </div>
+            <div class="ans">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quia eaque natus mollitia sunt unde dolores tempora dicta  <br>nobis corrupti eos quas, suscipit numquam? Dolorem, vero repellendus distinctio ipsa aliquid hic omnis est blanditiis fugiat vitae <br> corrupti ipsum voluptates possimus dicta non. Minus officiis repellat sapiente molestias placeat numquam nisi!
+                </p>
+            </div>
+        </div><div class="subcontainer">
+            <div class="que">
+                <h2>What is Netflix?</h2>
+            </div>
+            <div class="ans">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quia eaque natus mollitia sunt unde dolores tempora dicta  <br>nobis corrupti eos quas, suscipit numquam? Dolorem, vero repellendus distinctio ipsa aliquid hic omnis est blanditiis fugiat vitae <br> corrupti ipsum voluptates possimus dicta non. Minus officiis repellat sapiente molestias placeat numquam nisi!
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        
+         let myque = document.querySelectorAll(".subcontainer .que");
+        console.log(myque);
+
+        myque.forEach(function(que){
+            console.log(que);
+
+            que.addEventListener("click",function(){
+                console.log("clicked");
+
+                let ans = this.nextElementSibling;
+                console.log(ans);
+
+                if(ans.style.display == "block")
+                {
+                    ans.style.display = "none";
+                }
+                else{
+                    ans.style.display = "block"
+                }
+            })
+        })
+    </script>
+      
+</body>
+</html>

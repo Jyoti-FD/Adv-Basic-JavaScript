@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom & jerry</title>
+   <style>
+    body{
+        margin: 10px 0px 0px 400px;
+    }
+    img{
+        height: 450px;
+        width: 400px;
+    }
+    button{
+        padding: 10px 50px 10px 50px;
+        color: white;
+        background-color: yellowgreen;
+        font-size: 30px;
+    }
+   </style>
+</head>
+<body>
+    <img src="../image/tomrun.png"  alt="" id="img" >
+    <br><br>
+    <button onclick="changeimg()">click here</button>
+
+    <script>
+        function changeimg(){
+            document.getElementById('img').src='../image/tomcatch.png';
+        }
+    </script>
+</body>
+</html>

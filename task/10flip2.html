@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image img{
+            width: 55px;
+            height: 62px;
+        } 
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .image{
+            flex-direction: column; 
+            display: flex;
+            gap: 5px;
+        }
+        .image img:hover{
+            color: skyblue;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .image2 img{
+            height: 400px;
+            width: 300px;
+        }
+        .click{
+            margin: 10px 0px 0px 580px;
+            color: white;
+            border: none;
+        }
+        .btn1{
+           font-size: 20px;
+        padding: 15px 50px 15px 50px;
+        background-color: orange;
+       }
+       .btn2{
+           font-size: 20px;
+        padding: 15px 50px 15px 50px;
+        background-color: orangered;
+       }
+       .text{
+        text-align: center;
+        font-size: 30px;
+       }
+       span{
+        color: green;
+       }
+    </style>
+</head>
+<body>
+   <div class="main">
+    <div class="image">
+        <img src="../image/dresses-img.png" alt="">
+        <img src="../image/dresses-img (1).png" alt="">
+        <img src="../image/dresses-img (2).png" alt="">
+        <img src="../image/dresses-img (3).png" alt="">
+        <img src="../image/dresses-img (4).png" alt="">
+        <img src="../image/dresses-img (5).png" alt="">
+    </div>
+    <div class="image2">
+        <img src="../image/dresses-img.png" alt="">
+    </div>
+</div>
+<div class="text">
+    <p>Women Ethnic Dress Maroon Dress</p>
+    <h3>₹474 <span>26% off</span></h3>
+</div>
+<div class="click">
+    <button class="btn1">Wishlist</button>
+<button class="btn2">Buy Now</button>
+</div>
+
+   
+
+   <script>
+    var myallimage = document.querySelectorAll(".image img")
+    console.log(myallimage)
+
+    myallimage.forEach(function(img){
+        img.addEventListener("click",function(){
+            var myallimage = this.getAttribute("src")
+            console.log(myallimage);
+            // get img src from selected element
+
+
+            var preview = document.querySelector(".image2 img");
+            console.log(preview);
+
+            // set preview get src img
+
+            preview.setAttribute("src",myallimage);
+        })
+    })
+</script>
+</body>
+</html>
